@@ -21,10 +21,29 @@ class MyHomePage extends StatelessWidget {
           body:
           TabBarView(
             children: [
-              Container(),
-              Container(),
-              Container(),
-              Container(),
+              Container(
+                child:Padding(
+                  padding: const EdgeInsets.only(top:40.0),
+                  child: Text("Market"),
+                ),
+              ),
+              Container(
+                child:Padding(
+                  padding: const EdgeInsets.only(top:40.0),
+                  child: Text("Chat"),
+                ),
+              ),
+              Container(
+                child:Padding(
+                  padding: const EdgeInsets.only(top:40.0),
+                  child: Text("Home"),
+                ),
+              ),
+              Container(child:Padding(
+                padding: const EdgeInsets.only(top:40.0),
+                child: Text("Profile"),
+              ),
+              ),
             ],
           ),
           bottomNavigationBar: BottomAppBar(
@@ -38,10 +57,10 @@ class MyHomePage extends StatelessWidget {
                   MyBottomSheet(context),
                   TabBar(
                     tabs: [
-                      Tab(icon: Icon(Icons.ac_unit), text: "One",),
-                      Tab(icon: Icon(Icons.access_alarm), text: "Two",),
-                      Tab(icon: Icon(Icons.account_balance_wallet), text: "Three",),
-                      Tab(icon: Icon(Icons.account_balance), text: "Four",)
+                      Tab(icon: Icon(Icons.shop), text: "Market",),
+                      Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
+                      Tab(icon: Icon(Icons.home), text: "Home",),
+                      Tab(icon: Icon(Icons.person), text: "Profile",)
                     ],
                   ),
                 ],
