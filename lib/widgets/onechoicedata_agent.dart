@@ -7,18 +7,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class _InheritedPodcastAgentProvider extends InheritedWidget {
-  final _OneChoiceDataAgentState podcastAgent;
+class _InheritedDataAgentProvider extends InheritedWidget {
+  final _OneChoiceDataAgentState dataAgent;
 
-  _InheritedPodcastAgentProvider({
+  _InheritedDataAgentProvider({
     Key key,
-    this.podcastAgent,
+    this.dataAgent,
     @required Widget child,
   })  : assert(child != null),
         super(key: key, child: child);
 
   @override
-  bool updateShouldNotify(_InheritedPodcastAgentProvider old) => true;
+  bool updateShouldNotify(_InheritedDataAgentProvider old) => true;
 }
 
 class OneChoiceDataAgent extends StatefulWidget {
@@ -29,9 +29,9 @@ class OneChoiceDataAgent extends StatefulWidget {
       {@required this.child, this.type});
 
   static _OneChoiceDataAgentState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_InheritedPodcastAgentProvider)
-    as _InheritedPodcastAgentProvider)
-        .podcastAgent;
+    return (context.inheritFromWidgetOfExactType(_InheritedDataAgentProvider)
+    as _InheritedDataAgentProvider)
+        .dataAgent;
   }
 
   @override
@@ -65,8 +65,8 @@ class _OneChoiceDataAgentState extends State<OneChoiceDataAgent> {
 
   @override
   Widget build(BuildContext context) {
-    return _InheritedPodcastAgentProvider(
-      podcastAgent: this,
+    return _InheritedDataAgentProvider(
+      dataAgent: this,
       child: widget.child,
     );
   }
