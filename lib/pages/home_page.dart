@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../bottomNavBar.dart';
+import '../somethingGoodInput.dart';
 import '../topTabs.dart';
 // import 'package:one_choice/sheets/bottom_sheet.dart';
 // import 'package:one_choice/widgets/onechoicedata_agent.dart';
@@ -20,8 +21,10 @@ class MyHomePage extends StatelessWidget {
         length: 4,
         child:
         Scaffold(
-          body: 
-            TopTabs(),
+          body: Center(
+            child: TopTabs(),
+            // child: SomethingGoodInput(),
+          ),
           bottomNavigationBar: BottomNavBar(),
         ),
       );
