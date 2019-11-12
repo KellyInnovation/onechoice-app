@@ -1,5 +1,7 @@
 import 'package:one_choice/sheets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
+
+import '../bottomNavBar.dart';
 import 'package:one_choice/sheets/bottom_sheet.dart';
 import 'package:one_choice/widgets/onechoicedata_agent.dart';
 
@@ -46,27 +48,29 @@ class MyHomePage extends StatelessWidget {
               ),
             ],
           ),
-          bottomNavigationBar: BottomAppBar(
-            elevation: 0,
-            color: Color(0xff344955),
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              height: ht,
-              child: Column(
-                children: <Widget>[
-                  MyBottomSheet(context),
-                  TabBar(
-                    tabs: [
-                      Tab(icon: Icon(Icons.shop), text: "Market",),
-                      Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
-                      Tab(icon: Icon(Icons.home), text: "Home",),
-                      Tab(icon: Icon(Icons.person), text: "Profile",)
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+// CONTENT
+          bottomNavigationBar: BottomNavBar(),
+          // bottomNavigationBar: BottomAppBar(
+          //   elevation: 0,
+          //   color: Color(0xff344955),
+          //   child: Container(
+          //     padding: EdgeInsets.symmetric(horizontal: 10.0),
+          //     height: ht,
+          //     child: Column(
+          //       children: <Widget>[
+          //         MyBottomSheet(context),
+          //         TabBar(
+          //           tabs: [
+          //             Tab(icon: Icon(Icons.shop), text: "Market",),
+          //             Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
+          //             Tab(icon: Icon(Icons.home), text: "Home",),
+          //             Tab(icon: Icon(Icons.person), text: "Profile",)
+          //           ],
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ),
       );
   }
