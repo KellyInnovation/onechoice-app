@@ -19,15 +19,20 @@ class MyHomePage extends StatelessWidget {
     return
       DefaultTabController(
         length: 4,
-        child:
-        Scaffold(
-          body: Center(
-            child: TopTabs(),
-            // child: SomethingGoodInput(),
+        child: Scaffold(
+          appBar: AppBar(
+            actions: <Widget>[
+              TopTabs(),
+            ],
           ),
-          bottomNavigationBar: BottomNavBar(),
+          body: Column(
+            children: <Widget>[
+              SomethingGoodInput(),
+            ],
+          )    
+        bottomNavigationBar: BottomNavBar(),
         ),
-      );
+    );
   }
 }
 

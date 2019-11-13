@@ -10,8 +10,8 @@ class SomethingGoodInput extends StatelessWidget {
             border: OutlineInputBorder(),
             labelText: 'One good thing...',
           ),
-          textAlign: TextAlign.start,
-          textCapitalization: TextCapitalization.words,
+          // textAlign: TextAlign.start,
+          // textCapitalization: TextCapitalization.words,
         ),
       ],
     );
