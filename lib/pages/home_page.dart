@@ -1,4 +1,4 @@
-// import 'package:one_choice/sheets/bottom_sheet.dart';
+import 'package:one_choice/sheets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 import '../bottomNavBar.dart';
@@ -29,8 +29,8 @@ class MyHomePage extends StatelessWidget {
             children: <Widget>[
               SomethingGoodInput(),
             ],
-          )    
-        bottomNavigationBar: BottomNavBar(),
+          ),    
+          bottomNavigationBar: BottomNavBar(),
         ),
     );
   }
