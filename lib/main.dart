@@ -24,10 +24,12 @@ class MyMaterialAppState extends State<MyMaterialApp> {
         },
         debugShowCheckedModeBanner: false, 
         theme: ThemeData(
+          accentColor: Color(0xFF000000), //black
+          bottomAppBarColor: Color(0xFF66C4E8), //lightBlue
           brightness: Brightness.light,
-          primaryColor: Colors.lightBlue[800],
-          accentColor: Colors.cyan[600],
-          fontFamily: 'Sans Serif'
+          fontFamily: 'Sans Serif',
+          primaryColor: Color(0xFF66C4E8), //lightBlue
+          scaffoldBackgroundColor: Color(0xFFFFFFFF), //white
         ), 
         home: OneChoiceDataAgent(
           child:

@@ -10,8 +10,6 @@ class BottomNavBar extends StatelessWidget {
 
     return Container(child: 
       BottomAppBar(
-        elevation: 0,
-        color: Color(0xff344955),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 10.0),
           height: ht,
@@ -20,15 +18,42 @@ class BottomNavBar extends StatelessWidget {
               MyBottomSheet(context),
               TabBar(
                 tabs: [
-                  Tab(icon: Icon(Icons.home), text: "Home",),
-                  Tab(icon: Icon(Icons.shop), text: "Market",),
-                  Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
-                  Tab(icon: Icon(Icons.person), text: "Profile",)
+                  // Tab(icon: Icon(Icons.home), text: "Home",),
+                  Tab(
+                    icon: Icon(
+                      Icons.home,
+                      size: 40.0,
+                    ),
+                    text: "Home",
+                  ),
+                  Tab(
+                    icon: Icon(
+                      Icons.shop,
+                      size: 40.0,
+                    ), 
+                    text: "Market",
+                  ),
+                  Tab(
+                    icon: Icon(
+                      Icons.chat_bubble,
+                      size: 40.0,
+                    ), 
+                    text: "Chat",
+                  ),
+                  Tab(
+                    icon: Icon(
+                      Icons.person,
+                      size: 40.0,
+                    ), 
+                    text: "Profile",
+                  )
                 ],
               ),
             ],
           ),
         ),
+        // color: set in main.dart
+        elevation: 0,
       )
     );
   }
