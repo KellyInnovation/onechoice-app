@@ -20,9 +20,9 @@ class BottomNavBar extends StatelessWidget {
               MyBottomSheet(context),
               TabBar(
                 tabs: [
+                  Tab(icon: Icon(Icons.home), text: "Home",),
                   Tab(icon: Icon(Icons.shop), text: "Market",),
                   Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
-                  Tab(icon: Icon(Icons.home), text: "Home",),
                   Tab(icon: Icon(Icons.person), text: "Profile",)
                 ],
               ),
