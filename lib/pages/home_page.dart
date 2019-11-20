@@ -25,9 +25,9 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
           body: Column(
-            children: <Widget>[
-              SomethingGoodInput(),
-            ],
+            // children: <Widget>[
+              // SomethingGoodInput(),
+            // ],
           ),
           bottomNavigationBar: BottomNavBar(),
         ),
