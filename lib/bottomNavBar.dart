@@ -22,27 +22,31 @@ class BottomNavBar extends StatelessWidget {
                   Tab(
                     icon: Icon(
                       Icons.home,
+                      color: Colors.purple[800],
                       size: 40.0,
                     ),
                     text: "Home",
                   ),
                   Tab(
                     icon: Icon(
-                      Icons.shop,
-                      size: 40.0,
-                    ), 
-                    text: "Market",
-                  ),
-                  Tab(
-                    icon: Icon(
                       Icons.chat_bubble,
+                      color: Colors.red[800],
                       size: 40.0,
                     ), 
                     text: "Chat",
                   ),
                   Tab(
                     icon: Icon(
+                      Icons.shop,
+                      color: Colors.green[800],
+                      size: 40.0,
+                    ), 
+                    text: "Market",
+                  ),
+                  Tab(
+                    icon: Icon(
                       Icons.person,
+                      color: Colors.blue[800],
                       size: 40.0,
                     ), 
                     text: "Profile",
