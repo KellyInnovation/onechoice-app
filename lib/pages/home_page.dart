@@ -2,9 +2,11 @@
 // import 'package:one_choice/sheets/bottom_sheet.dart';
 // import 'package:one_choice/widgets/onechoicedata_agent.dart';
 import 'package:flutter/material.dart';
-import '../bottomNavBar.dart';
-import '../somethingGoodInput.dart';
-import '../topTabs.dart';
+import '../widgets/bottomNavBar.dart';
+import '../widgets/somethingGoodInput.dart';
+import '../widgets/topTabs.dart';
+import '../widgets/feed_widget.dart';
+import '../widgets/control_buttons.dart';
 
 const TITLE = "One Choice";
 
@@ -25,9 +27,11 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
           body: Column(
-            // children: <Widget>[
-              // SomethingGoodInput(),
-            // ],
+            children: <Widget>[
+              SomethingGoodInput(),
+              ControlButtons(),
+              Feed(),
+            ],
           ),
           bottomNavigationBar: BottomNavBar(),
         ),

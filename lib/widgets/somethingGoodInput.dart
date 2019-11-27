@@ -6,6 +6,7 @@ class SomethingGoodInput extends StatelessWidget {
     return Column(
       children: <Widget>[
         TextFormField(
+          initialValue: null,
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
             labelText: 'One good thing...',

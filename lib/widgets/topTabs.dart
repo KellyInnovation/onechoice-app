@@ -8,11 +8,14 @@ class TopTabs extends StatelessWidget {
       child: Row( 
         children: <Widget> [
           Container(
-            child: Text('One Choice'),
+            child: Align(
+              child: Text('One Choice'),
+            ) 
           ),
           Container(
             child: Image(
-              image: AssetImage('media/oneChoiceTree.png')
+              image: AssetImage('media/oneChoiceTree.png'),
+              
             )
           ),
         ]
