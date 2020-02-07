@@ -1,7 +1,12 @@
-import 'package:one_choice/sheets/bottom_sheet.dart';
+// import 'package:one_choice/sheets/bottom_sheet.dart';
+// import 'package:one_choice/sheets/bottom_sheet.dart';
+// import 'package:one_choice/widgets/onechoicedata_agent.dart';
 import 'package:flutter/material.dart';
-import 'package:one_choice/sheets/bottom_sheet.dart';
-import 'package:one_choice/widgets/onechoicedata_agent.dart';
+import '../widgets/bottomNavBar.dart';
+import '../widgets/somethingGoodInput.dart';
+import '../widgets/topTabs.dart';
+import '../widgets/feed_widget.dart';
+import '../widgets/control_buttons.dart';
 
 const TITLE = "One Choice";
 
@@ -12,67 +17,26 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var ht = 80.0;
     return
       DefaultTabController(
         length: 4,
-        child:
-        Scaffold(
-          body:
-          TabBarView(
-            children: [
-              Container(
-                child:Padding(
-                  padding: const EdgeInsets.only(top:40.0),
-                  child: Text("Market"),
-                ),
-              ),
-              Container(
-                child:Padding(
-                  padding: const EdgeInsets.only(top:40.0),
-                  child: Text("Chat"),
-                ),
-              ),
-              Container(
-                child:Padding(
-                  padding: const EdgeInsets.only(top:40.0),
-                  child: Text("Home"),
-                ),
-              ),
-              Container(child:Padding(
-                padding: const EdgeInsets.only(top:40.0),
-                child: Text("Profile"),
-              ),
-              ),
+        child: Scaffold(
+          appBar: AppBar(
+            actions: <Widget>[
+              TopTabs(),
             ],
           ),
-          bottomNavigationBar: BottomAppBar(
-            elevation: 0,
-            color: Color(0xff344955),
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              height: ht,
-              child: Column(
-                children: <Widget>[
-                  MyBottomSheet(context),
-                  TabBar(
-                    tabs: [
-                      Tab(icon: Icon(Icons.shop), text: "Market",),
-                      Tab(icon: Icon(Icons.chat_bubble), text: "Chat",),
-                      Tab(icon: Icon(Icons.home), text: "Home",),
-                      Tab(icon: Icon(Icons.person), text: "Profile",)
-                    ],
-                  ),
-                ],
-              ),
-            ),
+          body: Column(
+            children: <Widget>[
+              SomethingGoodInput(),
+              ControlButtons(),
+              Feed(),
+            ],
           ),
+          bottomNavigationBar: BottomNavBar(),
         ),
-      );
+    );
   }
 }
 
-
-/*
-
- */
+// var ht = 80.0;

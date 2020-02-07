@@ -22,10 +22,19 @@ class MyMaterialAppState extends State<MyMaterialApp> {
         routes: {
           MyHomePage.routeName: (_) => MyHomePage(),
         },
-        debugShowCheckedModeBanner: false, theme: darkTheme, home:
-        OneChoiceDataAgent(
-        child:
-          new MyApp())
+        debugShowCheckedModeBanner: false, 
+        theme: ThemeData(
+          accentColor: Color(0xFF000000), //black
+          bottomAppBarColor: Color(0xFF66C4E8), //lightBlue
+          brightness: Brightness.light,
+          fontFamily: 'Sans Serif',
+          primaryColor: Color(0xFF66C4E8), //lightBlue
+          scaffoldBackgroundColor: Color(0xFFFFFFFF), //white
+        ), 
+        home: OneChoiceDataAgent(
+          child:
+            new MyApp()
+          )
     );
   }
 }
