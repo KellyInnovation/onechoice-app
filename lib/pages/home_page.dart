@@ -3,7 +3,7 @@
 // import 'package:one_choice/widgets/onechoicedata_agent.dart';
 import 'package:flutter/material.dart';
 import '../widgets/bottomNavBar.dart';
-import '../widgets/somethingGoodInput.dart';
+import '../widgets/somethingGoodForm.dart';
 import '../widgets/topTabs.dart';
 import '../widgets/feed_widget.dart';
 import '../widgets/control_buttons.dart';
@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
           ),
           body: Column(
             children: <Widget>[
-              SomethingGoodInput(),
+              SomethingGoodForm(),
               ControlButtons(),
               Feed(),
             ],
