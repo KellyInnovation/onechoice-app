@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
+// import 'package:flutter/semantics.dart';
 
 class SomethingGoodForm extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class SomethingGoodForm extends StatefulWidget {
 class _SomethingGoodFormState extends State<SomethingGoodForm> {
   final _formKey = GlobalKey<FormState>();
 
-  String _name = '';
+  List<String> _onegoodthing = [''];
 
   getFormWidget() {
     TextFormField(
@@ -21,7 +21,7 @@ class _SomethingGoodFormState extends State<SomethingGoodForm> {
       ),
       onSaved: (String value) {
         setState(() {
-          _name = value;
+          _onegoodthing.add(value);
         });
       },
       validator: (String value) {
@@ -34,10 +34,17 @@ class _SomethingGoodFormState extends State<SomethingGoodForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: getFormWidget(),
+      // child: getFormWidget(),
+      child: Column(
+        children: <Widget>[
+          getFormWidget(),
+          Text('hello'),
+        ],
+      )
     );
   }
 }
+
   // @override
   // Widget build(BuildContext context) {
   //   return Form(
