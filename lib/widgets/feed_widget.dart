@@ -16,8 +16,8 @@ class Feed extends StatelessWidget {
           ),
           Image.asset(
             'media/latte_cup.png',
-            height: 300,
-            width: 180,
+            height: 100,
+            width: 80,
           )
         ],
       ),

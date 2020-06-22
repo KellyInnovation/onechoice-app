@@ -1,4 +1,4 @@
-import 'package:one_choice/pages/home_page.dart';
+import 'package:one_choice/pages/my_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:one_choice/utils/themes.dart';
 import 'package:one_choice/widgets/onechoicedata_agent.dart';
@@ -18,23 +18,24 @@ class MyMaterialAppState extends State<MyMaterialApp> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        title: 'One Choice',
+        debugShowCheckedModeBanner: false, 
+        title: 'OneChoice',
         routes: {
           MyHomePage.routeName: (_) => MyHomePage(),
         },
-        debugShowCheckedModeBanner: false, 
         theme: ThemeData(
+          brightness: Brightness.light,
+          fontFamily: 'NotoSansJP',
+          // primarySwatch: Colors.lightBlue,
           accentColor: Color(0xFF000000), //black
           bottomAppBarColor: Color(0xFF66C4E8), //lightBlue
-          brightness: Brightness.light,
-          fontFamily: 'Sans Serif',
           primaryColor: Color(0xFF66C4E8), //lightBlue
           scaffoldBackgroundColor: Color(0xFFFFFFFF), //white
         ), 
         home: OneChoiceDataAgent(
           child:
             new MyApp()
-          )
+          ),
     );
   }
 }
