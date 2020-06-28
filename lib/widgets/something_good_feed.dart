@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 
-class Feed extends StatelessWidget {
+class SomethingGoodFeed extends StatelessWidget {
   // DUMMY TEXT
   final String store = 'Third Street Stuff';
   

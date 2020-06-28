@@ -9,13 +9,28 @@ class Header extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget> [
           Column(
+            children: <Widget>[
+              Container(
+                child: IconButton(
+                  icon: const Icon(Icons.portrait),
+                  tooltip: 'User Menu',
+                  color: Color.fromRGBO(52, 65, 144, 1),
+                  // color: Theme.of(context).secondaryHeaderColor,
+                  onPressed: () {
+                    // ... Show User Diagnostics??? ...
+                  },
+                ),
+              ),
+            ],
+          ),
+          Column(
             children: [
 // Container FOR STYLING/RE-SIZING...NOT YET IN USE
               Container(
                 child: Text('One Choice', 
-                  textScaleFactor: 1.4,
                   style: TextStyle(
                     fontFamily: 'Pacifico',
+                    fontSize: 40,
                   ),
                 ),
               ),
@@ -31,10 +46,9 @@ class Header extends StatelessWidget {
           ),
           Column(
             children: [
-              // Text('Share-icon'),
               IconButton(
-                icon: const Icon(Icons.settings),
-                tooltip: 'Settings',
+                icon: const Icon(Icons.share),
+                tooltip: 'Share',
                 onPressed: () {
                   // scaffoldKey.currentState.showSharePage(sharePage);
                 },

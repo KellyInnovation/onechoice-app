@@ -15,6 +15,20 @@ class MyMaterialApp extends StatefulWidget {
 }
 
 class MyMaterialAppState extends State<MyMaterialApp> {
+  // Map<int, Color> color = {
+  //   50: Color.fromRGBO(47, 38, 119, .1),
+  //   100: Color.fromRGBO(47, 38, 119, .2),
+  //   200: Color.fromRGBO(47, 38, 119, .3),
+  //   300: Color.fromRGBO(47, 38, 119, .4),
+  //   400: Color.fromRGBO(47, 38, 119, .5),
+  //   500: Color.fromRGBO(47, 38, 119, .6),
+  //   600: Color.fromRGBO(47, 38, 119, .7),
+  //   700: Color.fromRGBO(47, 38, 119, .8),
+  //   800: Color.fromRGBO(47, 38, 119, .9),
+  //   900: Color.fromRGBO(47, 38, 119, 1),
+  // };
+  // MaterialColor colorCustom = MaterialColor(0xFFFF5C57, color);
+  
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -24,17 +38,25 @@ class MyMaterialAppState extends State<MyMaterialApp> {
           MyHomePage.routeName: (_) => MyHomePage(),
         },
         theme: ThemeData(
-          brightness: Brightness.light,
+// NEW COLORS
+// #2F2677 / fromRGBO(47, 38, 119, 1) - dark purple - icons
+// #344190 / fromRGBO(52, 65, 144, 1) - profile icon
+// #25B9AA / fromRGBO(37, 185, 170, 1) - header/footer background
           fontFamily: 'NotoSansJP',
-          // primarySwatch: Colors.lightBlue,
-          accentColor: Color(0xFF000000), //black
-          bottomAppBarColor: Color(0xFF66C4E8), //lightBlue
-          primaryColor: Color(0xFF66C4E8), //lightBlue
-          scaffoldBackgroundColor: Color(0xFFFFFFFF), //white
+          brightness: Brightness.light,
+          primaryColor: Color.fromRGBO(37, 185, 170, 1),
+          bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
+    // ICONS
+          secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
+          textTheme: TextTheme(
+            bodyText1: TextStyle(
+              fontSize: 14.0,
+            ),
+          ),
         ), 
         home: OneChoiceDataAgent(
           child:
-            new MyApp()
+            new MyApp(),
           ),
     );
   }

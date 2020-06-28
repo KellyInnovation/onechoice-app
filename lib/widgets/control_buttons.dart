@@ -1,28 +1,43 @@
 import 'package:flutter/material.dart';
 
 class ControlButtons extends StatelessWidget {
-  String choiceFavorites = 'Favorites';
-  String choicePhotoVideo = 'Photo/Video';
-  String choiceCheckIn = 'Check-in';
+  final String choiceFavorites = 'Favorites';
+  final String choicePhotoVideo = 'Photo/Video';
+  final String choiceCheckIn = 'Check-in';
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        children: <Widget> [
-          Icon(
-            Icons.thumb_up,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Icon(
+                Icons.thumb_up,
+                semanticLabel: choiceFavorites,
+              ),
+              Text(choiceFavorites),
+            ], 
           ),
-          Text(choiceFavorites),
-          Icon(
-            Icons.photo,
+          Column(
+            children: <Widget>[
+              Icon(
+                Icons.photo,
+                semanticLabel: choicePhotoVideo,
+              ),
+              Text(choicePhotoVideo),
+            ],
           ),
-          Text(choicePhotoVideo),
-          Icon(
-            Icons.navigation,
-            semanticLabel: choiceCheckIn,
+          Column(
+            children: <Widget>[
+              Icon(
+                Icons.navigation,
+                semanticLabel: choiceCheckIn,
+              ),
+              Text(choiceCheckIn),
+            ],
           ),
-          Text(choiceCheckIn),
         ],
       ),
     );
