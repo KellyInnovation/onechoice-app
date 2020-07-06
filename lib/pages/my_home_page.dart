@@ -3,13 +3,8 @@
 // import 'package:one_choice/widgets/onechoicedata_agent.dart';
 import 'package:flutter/material.dart';
 import '../widgets/bottom_nav_bar.dart';
-// import '../widgets/control_buttons.dart';
-// import '../widgets/something_good_feed.dart';
 import '../widgets/header.dart';
 import '../widgets/input_feed.dart';
-// import '../widgets/something_good_input.dart';
-
-// const TITLE = "One Choice";
 
 class MyHomePage extends StatelessWidget {
   static final routeName = "/home";
@@ -23,7 +18,7 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Header(),
           actions: <Widget>[
-// ...Actions here...
+// ...ACTIONS HERE...LIKE Sharing...
           ],
         ),
 // MAY NEED TO EVENTUALLY CHANGE TO ListView() FOR SCROLLING          

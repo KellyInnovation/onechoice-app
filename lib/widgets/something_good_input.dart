@@ -2,25 +2,38 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/semantics.dart';
 
 class SomethingGoodInput extends StatefulWidget {
+  // SomethingGoodInput({Key key}) : super(key: key);
+  final Function addFeed;
+  SomethingGoodInput(this.addFeed);
+
   @override
-  _SomethingGoodInputState createState() => new _SomethingGoodInputState();
+  _SomethingGoodInputState createState() => _SomethingGoodInputState();
 }
 
 class _SomethingGoodInputState extends State<SomethingGoodInput> {
-  final _formKey = GlobalKey<FormState>();
+  final inputController = TextEditingController();
 
-  List<String> _oneGoodThing = [
-    'yessir', 'here\'s some stuff', 'good things here, sukka',
-  ];
-  // List<Map<String, String>> _oneGoodThing;
-  
+  void submitFeed() {
+    final enteredFeed = inputController.text;
+    
+    try {
+      if(enteredFeed.isNotEmpty) {
+        widget.addFeed(enteredFeed);  
+      }
+    } catch (e) {}
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('\"text field\" part of MyHomePage Body goes here'),
+          TextField(
+            controller: inputController,
+            onSubmitted: (_) => submitFeed(),
+          ),          
         ],
       ),
     );

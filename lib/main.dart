@@ -36,17 +36,13 @@ class MyMaterialAppState extends State<MyMaterialApp> {
         title: 'OneChoice',
         routes: {
           MyHomePage.routeName: (_) => MyHomePage(),
+          // OTHER ROUTES HERE
         },
         theme: ThemeData(
-// NEW COLORS
-// #2F2677 / fromRGBO(47, 38, 119, 1) - dark purple - icons
-// #344190 / fromRGBO(52, 65, 144, 1) - profile icon
-// #25B9AA / fromRGBO(37, 185, 170, 1) - header/footer background
-          fontFamily: 'NotoSansJP',
-          brightness: Brightness.light,
-          primaryColor: Color.fromRGBO(37, 185, 170, 1),
           bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
-    // ICONS
+          brightness: Brightness.light,
+          fontFamily: 'NotoSansJP',
+          primaryColor: Color.fromRGBO(37, 185, 170, 1),
           secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
           textTheme: TextTheme(
             bodyText1: TextStyle(
