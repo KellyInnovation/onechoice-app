@@ -14,11 +14,11 @@ class _SomethingGoodInputState extends State<SomethingGoodInput> {
   final inputController = TextEditingController();
 
   void submitFeed() {
-    final enteredFeed = inputController.text;
+    final enteredPost = inputController.text;
     
     try {
-      if(enteredFeed.isNotEmpty) {
-        widget.addFeed(enteredFeed);  
+      if(enteredPost.isNotEmpty) {
+        widget.addFeed(enteredPost);  
       }
     } catch (e) {}
   }

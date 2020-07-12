@@ -3,6 +3,7 @@ import 'package:flutter/semantics.dart';
 import './something_good_feed.dart';
 import './something_good_input.dart';
 import '../widgets/control_buttons.dart';
+// import '../models/user.dart';
 
 class InputFeed extends StatefulWidget {
   @override 
@@ -10,13 +11,12 @@ class InputFeed extends StatefulWidget {
 }
 
 class _InputFeedState extends State<InputFeed> {
-  // final List<String> _tempList = [];
-  final List<String> _tempList = [ 'initial value', ];
+  final List<String> _tempList = [];
+  // final List<User> tempUser;
   
-  void _addFeed(enteredFeed) {
-    // print(enteredFeed);
+  void _addFeed(enteredPost) {
     setState(() {
-      _tempList.add(enteredFeed);
+      _tempList.add(enteredPost);
     });
     print(_tempList);
   }
