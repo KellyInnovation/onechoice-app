@@ -3,7 +3,7 @@ import 'package:flutter/semantics.dart';
 import './something_good_feed.dart';
 import './something_good_input.dart';
 import '../widgets/control_buttons.dart';
-// import '../models/user.dart';
+import '../models/posts.dart';
 
 class InputFeed extends StatefulWidget {
   @override 
@@ -11,14 +11,14 @@ class InputFeed extends StatefulWidget {
 }
 
 class _InputFeedState extends State<InputFeed> {
-  final List<String> _tempList = [];
-  // final List<User> tempUser;
+  final List<Map<String, dynamic>> _allPosts = [];
   
+// _addFeed NEEDS TO MANIPULATE user AND posts MODELS
   void _addFeed(enteredPost) {
     setState(() {
-      _tempList.add(enteredPost);
+      _allPosts.add(enteredPost);   
     });
-    print(_tempList);
+    print(_allPosts);
   }
 
   @override
@@ -29,7 +29,6 @@ class _InputFeedState extends State<InputFeed> {
           Material(
             elevation: 10,
             child: Container(
-// THIS Widget CURRENTLY THROWS ERRORS
               child: SomethingGoodInput(_addFeed),
             ),
           ),
@@ -40,9 +39,8 @@ class _InputFeedState extends State<InputFeed> {
             ),
           ),
           Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              SomethingGoodFeed(_tempList),
+              // SomethingGoodFeed(_allPosts),
             ],
           ),
         ],

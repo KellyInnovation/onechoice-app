@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 
 class Posts {
+  // final DateTime date;
   final String message;
-  final DateTime date;
-  // final String userID; // LATER...MUST FETCH THIS
+  // final String userID;
 
   Posts({
+    // @required this.date,
     @required this.message,
-    @required this.date,
     // @required this.userID,
   });
 }

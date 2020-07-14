@@ -18,7 +18,7 @@ class _SomethingGoodInputState extends State<SomethingGoodInput> {
     
     try {
       if(enteredPost.isNotEmpty) {
-        widget.addFeed(enteredPost);  
+        widget.addFeed({'message': enteredPost});
       }
     } catch (e) {}
   }
