@@ -13,6 +13,7 @@ class SomethingGoodInput extends StatefulWidget {
 class _SomethingGoodInputState extends State<SomethingGoodInput> {
   final inputController = TextEditingController();
 
+  
   void submitFeed() {
     final enteredPost = inputController.text;
     
@@ -21,8 +22,11 @@ class _SomethingGoodInputState extends State<SomethingGoodInput> {
         widget.addFeed({'message': enteredPost});
       }
     } catch (e) {}
+// QUICK FIX TO clear THE TEXTFIELD AFTER SUBMISSION
+    inputController.text = '';
   }
 
+// USE @override IS optional; USE WHEN superclass IS NOT UNDER CONTROL
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,6 +37,10 @@ class _SomethingGoodInputState extends State<SomethingGoodInput> {
           TextField(
             controller: inputController,
             onSubmitted: (_) => submitFeed(),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: 'What\'s something good?',
+            ),
           ),          
         ],
       ),
