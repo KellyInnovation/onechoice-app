@@ -1,12 +1,13 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/semantics.dart';
 
 class SomethingGoodFeed extends StatelessWidget {
   // DUMMY TEXT
-  final List<String> feed;
+  final List<Map<String, dynamic>> allPosts;
   final String store = 'Third Street Stuff';
   
-  SomethingGoodFeed(this.feed);
+  SomethingGoodFeed(this.allPosts);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class SomethingGoodFeed extends StatelessWidget {
       height: 500,
       width: 300,
 
-      child: feed.isEmpty ? Column(
+      child: allPosts.isEmpty ? Column(
         children: <Widget> [
           Text('Nothing Good...yet!'),
         ],
@@ -34,7 +35,7 @@ class SomethingGoodFeed extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            feed[index],
+                            allPosts[index]['message'].toString(),
                           ),
                         ],
                       ),
@@ -93,7 +94,7 @@ class SomethingGoodFeed extends StatelessWidget {
             // ),
             
           // ); 
-        itemCount: feed.length,
+        itemCount: allPosts.length,
       ),
     );
   }

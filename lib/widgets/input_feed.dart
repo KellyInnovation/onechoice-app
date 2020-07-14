@@ -40,7 +40,7 @@ class _InputFeedState extends State<InputFeed> {
           ),
           Row(
             children: <Widget>[
-              // SomethingGoodFeed(_allPosts),
+              SomethingGoodFeed(_allPosts),
             ],
           ),
         ],
