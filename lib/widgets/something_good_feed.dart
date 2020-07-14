@@ -28,10 +28,10 @@ class SomethingGoodFeed extends StatelessWidget {
             child: Column(
               children: <Widget>[            
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Flexible(
-                      flex: 2,
+                      flex: 8,
                       child: Column(
                         children: <Widget>[
                           Text(
@@ -51,7 +51,7 @@ class SomethingGoodFeed extends StatelessWidget {
                       ),
                     ),
                     Flexible(
-                      flex: 4,
+                      flex: 5,
                       child: Column(
                         children: <Widget>[
                           Image.asset(
