@@ -10,12 +10,12 @@ class User {
   final String username;
   final String userID; // A UNIQUE id
   final DateTime signupDate;
-  // final avatar; // HOW TO DO THIS?
+  final dynamic avatar;
 
   User({
     @required this.username,
     @required this.userID,
     @required this.signupDate,
-    // @required this.avatar, // HOW TO DO THIS?
+    @required this.avatar,
   });
 }

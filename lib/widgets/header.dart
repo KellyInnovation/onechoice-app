@@ -12,13 +12,14 @@ class Header extends StatelessWidget {
             children: <Widget>[
               Container(
                 child: IconButton(
-                  icon: const Icon(Icons.portrait),
+                  icon: const Icon(Icons.account_circle),
                   tooltip: 'User Menu',
                   color: Color.fromRGBO(52, 65, 144, 1),
                   // color: Theme.of(context).secondaryHeaderColor,
                   onPressed: () {
                     // ... Show User Diagnostics??? ...
                   },
+                  iconSize: 40.0,
                 ),
               ),
             ],
@@ -39,8 +40,9 @@ class Header extends StatelessWidget {
           Column(
             children: [
               Image(
-                height: 50.0,
-                image: AssetImage('media/oneChoiceTree.png'),
+                height: 40.0,
+                image: AssetImage('media/sun-logo.jpeg'),
+                // image: AssetImage('media/oneChoiceTree.png'),
               ),
             ],
           ),

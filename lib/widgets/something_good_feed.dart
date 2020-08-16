@@ -30,6 +30,12 @@ class SomethingGoodFeed extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+// THE Users' avatar
+                    Icon(
+                      Icons.account_circle,
+                      size: 40.0,
+                    ),
+// THE message
                     Flexible(
                       flex: 8,
                       child: Column(
@@ -40,6 +46,7 @@ class SomethingGoodFeed extends StatelessWidget {
                         ],
                       ),
                     ),
+// ...
                     Flexible(
                       flex: 1,
                       child: Column(
@@ -50,6 +57,7 @@ class SomethingGoodFeed extends StatelessWidget {
                         ],
                       ),
                     ),
+// THE STORE's ICON                    
                     Flexible(
                       flex: 5,
                       child: Column(

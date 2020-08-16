@@ -1,7 +1,9 @@
-import 'package:one_choice/pages/my_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:one_choice/utils/themes.dart';
 import 'package:one_choice/widgets/onechoicedata_agent.dart';
+
+import './pages/my_home_page.dart';
+import './pages/chat_page.dart';
 
 typedef void OnError(Exception exception);
 
@@ -15,20 +17,6 @@ class MyMaterialApp extends StatefulWidget {
 }
 
 class MyMaterialAppState extends State<MyMaterialApp> {
-  // Map<int, Color> color = {
-  //   50: Color.fromRGBO(47, 38, 119, .1),
-  //   100: Color.fromRGBO(47, 38, 119, .2),
-  //   200: Color.fromRGBO(47, 38, 119, .3),
-  //   300: Color.fromRGBO(47, 38, 119, .4),
-  //   400: Color.fromRGBO(47, 38, 119, .5),
-  //   500: Color.fromRGBO(47, 38, 119, .6),
-  //   600: Color.fromRGBO(47, 38, 119, .7),
-  //   700: Color.fromRGBO(47, 38, 119, .8),
-  //   800: Color.fromRGBO(47, 38, 119, .9),
-  //   900: Color.fromRGBO(47, 38, 119, 1),
-  // };
-  // MaterialColor colorCustom = MaterialColor(0xFFFF5C57, color);
-  
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -36,7 +24,8 @@ class MyMaterialAppState extends State<MyMaterialApp> {
         title: 'OneChoice',
         routes: {
           MyHomePage.routeName: (_) => MyHomePage(),
-          // OTHER ROUTES HERE
+          ChatPage.routeName: (_) => ChatPage(),
+// CONTINUE OTHER routes HERE
         },
         theme: ThemeData(
           bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
@@ -46,7 +35,7 @@ class MyMaterialAppState extends State<MyMaterialApp> {
           secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
           textTheme: TextTheme(
             bodyText1: TextStyle(
-              fontSize: 14.0,
+              fontSize: 20.0,
             ),
           ),
         ), 
@@ -92,6 +81,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return  OneChoiceDataAgent(
         child: new MyHomePage()
+        // child: new ChatPage()
     );
   }
 }
