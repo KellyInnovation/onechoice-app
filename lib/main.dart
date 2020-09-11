@@ -80,8 +80,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return  OneChoiceDataAgent(
-        child: new MyHomePage()
-        // child: new ChatPage()
+        // child: new MyHomePage()
+        child: new ChatPage()
     );
   }
 }
