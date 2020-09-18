@@ -7,8 +7,6 @@ import '../widgets/header.dart';
 // import '../widgets/input_feed.dart';
 
 class ChatPage extends StatelessWidget {
-  static final routeName = "/chat";
-
   ChatPage({Key key}) : super(key: key);
 
   @override
@@ -18,9 +16,11 @@ class ChatPage extends StatelessWidget {
         appBar: AppBar(
           title: Header(),
           actions: <Widget>[
+// TODO
 // ...ACTIONS HERE...LIKE Sharing...
           ],
         ),
+// TODO
 // MAY NEED TO EVENTUALLY CHANGE TO ListView() FOR SCROLLING          
         body: SingleChildScrollView(
           child: Column(
@@ -36,8 +36,8 @@ class ChatPage extends StatelessWidget {
                   Text('A Search Field goes here'),
                 ],
               ),
-// BELOW search widget
-// A LIST OF 'Friends'
+// TODO
+// BELOW search WIDGET A LIST OF 'Friends'
               Text('A list of Friends goes here'),
               Text('A list of Friends goes here'),
               Text('A list of Friends goes here'),                            

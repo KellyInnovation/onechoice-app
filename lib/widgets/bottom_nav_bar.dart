@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:one_choice/sheets/bottom_sheet.dart';
 
+import '../pages/routing_constants.dart';
+
 class BottomNavBar extends StatelessWidget {
 
   @override
@@ -18,6 +20,8 @@ class BottomNavBar extends StatelessWidget {
             height: ht,
             child: Column(
               children: <Widget>[
+// TODO
+                // UNSURE WHAT THE PURPOSE OF MyBottomSheet WIDGET IS...
                 MyBottomSheet(context),
                 TabBar(
                   tabs: [
@@ -28,14 +32,32 @@ class BottomNavBar extends StatelessWidget {
                         size: 40.0,
                       ),
                       text: "Home",
+// TODO
+                      // child: FloatingActionButton(
+                      //   onPressed: () {
+                      //     Navigator.pushNamed(context, HomePageRoute);
+                      //   }
+                      // ),
                     ),
                     Tab(
-                      icon: Icon(
-                        Icons.chat_bubble,
-                        color: Colors.red[800],
-                        size: 40.0,
-                      ), 
-                      text: "Chat",
+                      child: FlatButton(
+                        child: Container(
+// TODO
+                          // TRYING TO FIT Text AND Icon IN SPACE                          
+                          child: Column(
+                            children: [  
+                              Icon(Icons.chat_bubble,
+                                color: Colors.red[800],
+                                size: 40.0,
+                              ),
+                              Text('Chat'),
+                            ],
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, ChatPageRoute);
+                        }
+                      ),
                     ),
                     Tab(
                       icon: Icon(

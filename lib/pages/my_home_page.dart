@@ -7,8 +7,6 @@ import '../widgets/header.dart';
 import '../widgets/input_feed.dart';
 
 class MyHomePage extends StatelessWidget {
-  static final routeName = "/home";
-
   MyHomePage({Key key}) : super(key: key);
 
   @override
