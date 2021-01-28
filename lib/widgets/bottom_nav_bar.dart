@@ -26,31 +26,36 @@ class BottomNavBar extends StatelessWidget {
                 TabBar(
                   tabs: [
                     Tab(
-                      icon: Icon(
-                        Icons.home,
-                        color: Colors.purple[800],
-                        size: 40.0,
-                      ),
-                      text: "Home",
+                      child: FlatButton(
+                        child: Container(
 // TODO
-                      // child: FloatingActionButton(
-                      //   onPressed: () {
-                      //     Navigator.pushNamed(context, HomePageRoute);
-                      //   }
-                      // ),
+// TRYING TO FIT Text AND Icon IN SPACE                          
+                          child: Column(
+                            children: [  
+                              Icon(
+                                Icons.home,
+                                color: Colors.purple[800],
+                                size: 40.0,
+                              ),
+                              // Text('Home'),
+                            ],
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, HomePageRoute);
+                        }
+                      ),
                     ),
                     Tab(
                       child: FlatButton(
                         child: Container(
-// TODO
-                          // TRYING TO FIT Text AND Icon IN SPACE                          
                           child: Column(
                             children: [  
                               Icon(Icons.chat_bubble,
                                 color: Colors.red[800],
-                                size: 40.0,
+                                size: 38.0,
                               ),
-                              Text('Chat'),
+                              // Text('Chat'),
                             ],
                           ),
                         ),
@@ -60,20 +65,40 @@ class BottomNavBar extends StatelessWidget {
                       ),
                     ),
                     Tab(
-                      icon: Icon(
-                        Icons.shop,
-                        color: Colors.green[800],
-                        size: 40.0,
-                      ), 
-                      text: "Market",
+                      child: FlatButton(
+                        child: Container(
+                          child: Column(
+                            children: [  
+                              Icon(Icons.shop,
+                                color: Colors.green[800],
+                                size: 38.0,
+                              ),
+                              // Text('Shop'),
+                            ],
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, MarketPageRoute);
+                        }
+                      ),
                     ),
                     Tab(
-                      icon: Icon(
-                        Icons.person,
-                        color: Colors.blue[800],
-                        size: 40.0,
-                      ), 
-                      text: "Profile",
+                      child: FlatButton(
+                        child: Container(
+                          child: Column(
+                            children: [  
+                              Icon(Icons.person,
+                                color: Colors.blue[800],
+                                size: 38.0,
+                              ),
+                              // Text('Profile'),
+                            ],
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, ProfilePageRoute);
+                        }
+                      ),
                     ),
                   ],
                 ),

@@ -23,22 +23,22 @@ class MyMaterialAppState extends State<MyMaterialApp> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        debugShowCheckedModeBanner: false, 
-        title: 'OneChoice',
-        onGenerateRoute: router.generateRoute,
-        initialRoute: HomePageRoute,
-        theme: ThemeData(
-          bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
-          brightness: Brightness.light,
-          fontFamily: 'NotoSansJP',
-          primaryColor: Color.fromRGBO(37, 185, 170, 1),
-          secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
-          textTheme: TextTheme(
-            bodyText1: TextStyle(
-              fontSize: 20.0,
-            ),
+      debugShowCheckedModeBanner: false, 
+      title: 'OneChoice',
+      onGenerateRoute: router.generateRoute,
+      initialRoute: HomePageRoute,
+      theme: ThemeData(
+        bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
+        brightness: Brightness.light,
+        fontFamily: 'NotoSansJP',
+        primaryColor: Color.fromRGBO(37, 185, 170, 1),
+        secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+            fontSize: 20.0,
           ),
-        ), 
+        ),
+      ), 
 // TODO
 // MAY NOT NEED home: ~ AS AM NOW USING initialRoute
 

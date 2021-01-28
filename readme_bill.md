@@ -10,9 +10,13 @@
 ``` $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ```
 
 ## Running a Flutter app
-*unfinished
+1. Start up the iPhone emulator
+``` $ open -a Simulator.app ```
 
+2. Run a Flutter APP (do so from the main directory where the `main.dart` file is located. Usually it lives in `lib/main.dart`)
+``` $ flutter run ```
 
+## You may also run a different Emulator
 1. Run the emulator of your choice:
 ``` $ flutter run <emulator> ```
 EXAMPLES:
