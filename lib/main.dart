@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:one_choice/utils/themes.dart';
-import 'package:one_choice/widgets/onechoicedata_agent.dart';
+// import 'package:one_choice/utils/themes.dart';
+// import 'package:one_choice/widgets/onechoicedata_agent.dart';
 
 import './pages/routing_constants.dart';
-import './pages/my_home_page.dart';
-import './pages/chat_page.dart';
+// import './pages/home_page.dart';
+// import './pages/chat_page.dart';
 
 import './pages/router.dart' as router;
 

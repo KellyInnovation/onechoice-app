@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './routing_constants.dart';
-import './my_home_page.dart';
+import './home_page.dart';
 import './chat_page.dart';
 import './market_page.dart';
 import './profile_page.dart';
@@ -9,7 +9,7 @@ import './profile_page.dart';
 Route<dynamic> generateRoute(RouteSettings settings) {
 switch (settings.name) {
   case HomePageRoute:
-    return MaterialPageRoute(builder: (context) => MyHomePage());
+    return MaterialPageRoute(builder: (context) => HomePage());
   case ChatPageRoute:
     return MaterialPageRoute(builder: (context) => ChatPage());
   case MarketPageRoute:
@@ -17,6 +17,6 @@ switch (settings.name) {
   case ProfilePageRoute:
     return MaterialPageRoute(builder: (context) => ProfilePage());
   default:
-    return MaterialPageRoute(builder: (context) => MyHomePage());
+    return MaterialPageRoute(builder: (context) => HomePage());
  } 
 }

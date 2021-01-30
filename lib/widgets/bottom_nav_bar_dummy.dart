@@ -3,7 +3,7 @@ import 'package:one_choice/sheets/bottom_sheet.dart';
 
 import '../pages/routing_constants.dart';
 
-class BottomNavBar extends StatelessWidget {
+class BottomNavBarDummy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

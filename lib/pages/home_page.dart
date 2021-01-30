@@ -6,8 +6,8 @@ import '../widgets/bottom_nav_bar.dart';
 import '../widgets/header.dart';
 import '../widgets/input_feed.dart';
 
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  HomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
