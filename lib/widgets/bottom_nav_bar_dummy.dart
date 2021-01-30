@@ -24,8 +24,8 @@ class BottomNavBarDummy extends StatelessWidget {
                 // UNSURE WHAT THE PURPOSE OF MyBottomSheet WIDGET IS...
                 // SEEMS TO SETUP A state IN THE bottem_sheet WIDGET
                 // MyBottomSheet(context),
-                TabBar(
-                  tabs: [
+                // TabBar(
+                //   tabs: [
                     Tab(
                       child: FlatButton(
                         child: Container(                     
@@ -98,8 +98,8 @@ class BottomNavBarDummy extends StatelessWidget {
                           Navigator.pushNamed(context, ProfilePageRoute);
                         }
                       ),
-                    ),
-                  ],
+                  //   ),
+                  // ],
                 ),
               ],
             ),

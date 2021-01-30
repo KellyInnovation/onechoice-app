@@ -5,6 +5,7 @@ import './home_page.dart';
 import './chat_page.dart';
 import './market_page.dart';
 import './profile_page.dart';
+import './landing_page.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
 switch (settings.name) {
@@ -17,6 +18,6 @@ switch (settings.name) {
   case ProfilePageRoute:
     return MaterialPageRoute(builder: (context) => ProfilePage());
   default:
-    return MaterialPageRoute(builder: (context) => HomePage());
+    return MaterialPageRoute(builder: (context) => LandingPage());
  } 
 }

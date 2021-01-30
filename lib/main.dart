@@ -27,6 +27,7 @@ class MyMaterialAppState extends State<MyMaterialApp> {
       title: 'OneChoice',
       onGenerateRoute: router.generateRoute,
       initialRoute: HomePageRoute,
+      // initialRoute: LandingPageRoute,
       theme: ThemeData(
         bottomAppBarColor: Color.fromRGBO(37, 185, 170, 1),
         brightness: Brightness.light,
@@ -35,7 +36,7 @@ class MyMaterialAppState extends State<MyMaterialApp> {
         secondaryHeaderColor: Color.fromRGBO(47, 38, 119, 1), // dark purple
         textTheme: TextTheme(
           bodyText1: TextStyle(
-            fontSize: 20.0,
+            fontSize: 18.0,
           ),
         ),
       ), 

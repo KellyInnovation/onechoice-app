@@ -3,6 +3,7 @@
 // import 'package:one_choice/widgets/onechoicedata_agent.dart';
 import 'package:flutter/material.dart';
 import '../widgets/bottom_nav_bar.dart';
+import '../widgets/bottom_nav_bar_dummy.dart';
 import '../widgets/header.dart';
 import '../pages/home_page.dart';
 // import '../widgets/input_feed.dart';
@@ -19,6 +20,11 @@ class LandingPage extends StatelessWidget {
           actions: <Widget>[
 // ...ACTIONS HERE...LIKE Sharing...
           ],
+          bottom: TabBar(
+            tabs: [
+              BottomNavBarDummy(),
+            ]
+          ),
         ),
 // MAY NEED TO EVENTUALLY CHANGE TO ListView() FOR SCROLLING          
         body: SingleChildScrollView(
@@ -28,7 +34,7 @@ class LandingPage extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavBar(),
+        // bottomNavigationBar: BottomNavBar(),
       ),
     );
   }
