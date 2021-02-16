@@ -3,7 +3,7 @@ import 'package:one_choice/sheets/bottom_sheet.dart';
 
 import '../pages/routing_constants.dart';
 
-class BottomNavBar extends StatelessWidget {
+class BottomNavBarDummy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,8 @@ class BottomNavBar extends StatelessWidget {
                 // UNSURE WHAT THE PURPOSE OF MyBottomSheet WIDGET IS...
                 // SEEMS TO SETUP A state IN THE bottem_sheet WIDGET
                 // MyBottomSheet(context),
-                TabBar(
-                  tabs: [
+                // TabBar(
+                //   tabs: [
                     Tab(
                       child: FlatButton(
                         child: Container(                     
@@ -98,8 +98,8 @@ class BottomNavBar extends StatelessWidget {
                           Navigator.pushNamed(context, ProfilePageRoute);
                         }
                       ),
-                    ),
-                  ],
+                  //   ),
+                  // ],
                 ),
               ],
             ),
